@@ -69,6 +69,8 @@ peer_employers              #Print Geomap
 
 saveWidget(peer_employers, 'peer-emp-map.html', selfcontained = F)
 
-file.remove('H:/My Drive/Peerforce/peer-emp-map/peer-emp-map/index.php')
+file.remove('H:/My Drive/Peerforce/peer-emp-map/peer-emp-map/index.html')
 
-file.rename('H:/My Drive/Peerforce/peer-emp-map/peer-emp-map/peer-emp-map.php', 'H:/My Drive/Peerforce/peer-emp-map/peer-emp-map/index.php')
+file.rename('H:/My Drive/Peerforce/peer-emp-map/peer-emp-map/peer-emp-map.html', 'H:/My Drive/Peerforce/peer-emp-map/peer-emp-map/index.html')
+
+
