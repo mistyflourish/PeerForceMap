@@ -55,10 +55,10 @@ peer_employers <- leaflet(data = peer_table) %>%
                          paste("<a href='", peer_table$`Career Website`,"'>", peer_table$`Career Website`, '</a>')),
                    ''),                            #Add Career Website and make Clickable
             ifelse(PeerEmp == 'Yes', 
-                   paste('<br>','<strong> Peer Employer: <font color="#006633"">✓</font> </strong>'),
+                   paste('<br>','<strong> Peer Employer: <font color="#006633"">&#10003;</font> </strong>'),
                    paste('<br>','<strong> Peer Employer: <font color="#DC82C20">X</font> </strong>')),
             ifelse(Intern == 'Yes', 
-                   paste('<br>','<strong> Offers Internships: <font color="#006633">✓</font> </strong>'),
+                   paste('<br>','<strong> Offers Internships: <font color="#006633">&#10003;</font> </strong>'),
                    paste('<br>','<strong> Offers Internships: <font color="#DC82C20">X</font> </strong>')) 
             
       ) 
@@ -67,10 +67,12 @@ peer_employers <- leaflet(data = peer_table) %>%
 
 peer_employers              #Print Geomap
 
+setwd('H:/My Drive/PeerForce_Map/peer-emp-map')
+
 saveWidget(peer_employers, 'peer-emp-map.html', selfcontained = F)
 
-file.remove('H:/My Drive/Peerforce/peer-emp-map/peer-emp-map/index.html')
+file.remove('H:/My Drive/PeerForce_Map/peer-emp-map/index.html')
 
-file.rename('H:/My Drive/Peerforce/peer-emp-map/peer-emp-map/peer-emp-map.html', 'H:/My Drive/Peerforce/peer-emp-map/peer-emp-map/index.html')
+file.rename('H:/My Drive/PeerForce_Map/peer-emp-map/peer-emp-map.html', 'H:/My Drive/PeerForce_Map/peer-emp-map/index.html')
 
 
